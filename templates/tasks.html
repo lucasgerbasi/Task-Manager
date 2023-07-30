@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1 id="tasklist">Task List</h1>
+    <ul>
+        {% for task in tasks %}
+        <div class="card">
+        <div class="card2">
+            <span class='task-description'>{{ loop.index }}. {{ task }}</span>
+            <form action="/remove" method="post">
+                <input type="hidden" name="task_index" value="{{ loop.index }}">
+                <button class="remove-btn" type="submit">Remove</button>
+            </form>
+        </div>
+    </div>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Task Manager</h1>
+        <form action="/add" method="post">
+            <div class="form-control">
+                <input type="text" id="task_description" name="task_description" required maxlength="180">
+                <label for="task_description">
+                    <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">n</span><span style="transition-delay:100ms">t</span><span style="transition-delay:150ms">e</span><span style="transition-delay:200ms">r</span><span style="transition-delay:250ms">&nbsp;</span><span style="transition-delay:300ms">y</span><span style="transition-delay:350ms">o</span><span style="transition-delay:400ms">u</span><span style="transition-delay:450ms">r</span><span style="transition-delay:500ms">&nbsp;</span><span style="transition-delay:550ms">t</span><span style="transition-delay:600ms">a</span><span style="transition-delay:650ms">s</span><span style="transition-delay:700ms">k</span><span style="transition-delay:750ms">:</span>
+                </label>
+            </div>
+            <button class='btn' type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> Add Task
+            </button>
+        </form>
+        <br>
+        <a href="/view">View All Tasks</a>
+    </div>
+</body>
+</html>
